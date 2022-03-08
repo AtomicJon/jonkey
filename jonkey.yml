@@ -1,0 +1,208 @@
+points:
+  key:
+    footprints:
+      diode:
+        type: diode
+        nets:
+          from: =colrow
+          to: =row_net
+        anchor:
+          shift: [0, 5]
+          # rotate: 90
+        params:
+          through_hole: false
+      via_row:
+        type: via
+        nets:
+          net: =colrow
+        anchor:
+          shift: [0, -3.5]
+      via_col:
+        type: via
+        nets:
+          net: =column_net
+        anchor:
+          shift: [0, -8.5]
+      choc_hotswap:
+        type: choc
+        nets:
+          from: =colrow
+          to: =column_net
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+        anchor:
+          rotate: 180
+      # Sticking to choc only for now to reduce complexity
+      # mx:
+      #   type: mx
+      #   anchor:
+      #   nets:
+      #     from: =column_net
+      #     to: =colrow
+      #   params:
+      #     keycaps: true
+      #     reverse: true
+      #     hotswap: true
+  zones:
+    matrix:
+      anchor:
+        rotate: 0
+      columns:
+        macro:
+          key:
+            column_net: P16
+        command:
+          stagger: 0
+          key:
+            column_net: P14
+        pinky:
+          stagger: 0
+          key:
+            column_net: P15
+        ring:
+          stagger: 5
+          key:
+            column_net: P18
+        middle:
+          stagger: 3
+          key:
+            column_net: P19
+        index:
+          stagger: -3
+          key:
+            column_net: P20
+        inner:
+          stagger: -3
+          key:
+            column_net: P21
+      rows:
+        bottom:
+          row_net: P10
+          bind: [1, 22, 1, 1]
+        home:
+          row_net: P6
+          bind: [1, 22, 1, 1]
+        top:
+          row_net: P5
+          bind: [1, 22, 1, 1]
+        numbers:
+          row_net: P4
+          bind: [4, 12, 1, 1]
+    thumb:
+      anchor:
+        ref: matrix_index_bottom
+        shift: [0, -22]
+      columns:
+        index:
+          stagger: 1
+          key:
+            column_net: P20
+            bind: [3, 1, 1, 1]
+        inner:
+          stagger: -3
+          key:
+            column_net: P21
+            bind: [3, 1, 1, 1]
+        far:
+          spread: 24
+          stagger: -5
+          rotate: -30
+          key:
+            column_net: P9
+            bind: [4, 4, 1, 15]
+      rows:
+        thumb:
+          row_net: P7
+    thumb_secondary:
+      anchor:
+        ref: thumb_far_thumb
+        shift: [0, -22]
+      columns:
+        near:
+          key:
+            column_net: P9
+      rows:
+        thumb:
+          row_net: P8
+          bind: [4, 4, 1, 4]
+    meta:
+      anchor:
+        ref: matrix_command_bottom
+        shift: [0, -19]
+      columns:
+        ctrl:
+          key:
+            column_net: P14
+        meta:
+          key:
+            column_net: P15
+        alt:
+          stagger: 3
+          key:
+            column_net: P18
+        fn:
+          stagger: 3
+          key:
+            column_net: P19
+      rows:
+        thumb:
+          row_net: P7
+          bind: [4, 1, 1, 1]
+outlines:
+  exports:
+    raw:
+      - type: keys
+        side: left
+        size: [1cx , 1cy]
+    cutout:
+      - type: outline
+        name: raw
+        fillet: 1
+    keycap_outlines:
+      - type: keys
+        side: left
+        size: [1cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
+        bound: false
+pcbs:
+  main:
+    outlines:
+      main:
+        outline: cutout
+    footprints:
+      promicro:
+        type: promicro
+        anchor:
+          ref: matrix_inner_top
+          shift: [21, -9]
+          rotate: -90
+        params:
+          orientation: down
+      reset_switch:
+        type: tactswitch
+        anchor:
+          ref: matrix_inner_bottom
+          shift: [25, 5]
+        nets:
+          from: RST
+          to: GND
+      trrs:
+        type: trrsCustom
+        anchor:
+          ref: matrix_inner_bottom
+          shift: [29, -8]
+          rotate: -90
+        params:
+          mirror: true
+          reverse: false
+          symmetric: false
+        nets:
+          A: VCC
+          B: P2
+          C: P3
+          D: GND
+cases:
+  baseplate:
+    - type: outline
+      name: cutout
