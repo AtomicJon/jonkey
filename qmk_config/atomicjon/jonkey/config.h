@@ -47,6 +47,8 @@
  */
 // Pin 2 and 3 are cross connected via TRS, using 2 (3 is D0)
 #define SOFT_SERIAL_PIN D1  // or D1, D2, D3, E6
+// To use I2C, comment out the above line and uncomment the line below - requires adding pullup resistors on D0 and D1
+// #define USE_I2C
 
 //#define LED_NUM_LOCK_PIN B0
 //#define LED_CAPS_LOCK_PIN B1
