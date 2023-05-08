@@ -3,14 +3,22 @@
 
 #pragma once
 
-#include "config_common.h"
+// Should no longer be included
+// #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID    0xFEED
-#define PRODUCT_ID   0x0000
-#define DEVICE_VER   0x0001
-#define MANUFACTURER AtomicJon
-#define PRODUCT      jonkey
+/*
+⚠ atomicjon/jonkey: PRODUCT_ID in config.h is deprecated in favor of `usb.pid` in info.json and will be removed at a later date
+⚠ atomicjon/jonkey: VENDOR_ID in config.h is deprecated in favor of `usb.vid` in info.json and will be removed at a later date
+⚠ atomicjon/jonkey: PRODUCT in config.h is deprecated in favor of `keyboard_name` in info.json and will be removed at a later date
+⚠ atomicjon/jonkey: MANUFACTURER in config.h is deprecated in favor of `manufacturer` in info.json and will be removed at a later date
+⚠ atomicjon/jonkey: DEVICE_VER in config.h is deprecated in favor of `usb.device_version` in info.json and will be removed at a later date
+*/
+// #define VENDOR_ID    0xFEED
+// #define PRODUCT_ID   0x0000
+// #define DEVICE_VER   0x0001
+// #define MANUFACTURER AtomicJon
+// #define PRODUCT      jonkey
 
 // Hardcoding handedness for now
 #define MASTER_RIGHT
@@ -49,6 +57,8 @@
 #define SOFT_SERIAL_PIN D1  // or D1, D2, D3, E6
 // To use I2C, comment out the above line and uncomment the line below - requires adding pullup resistors on D0 and D1
 // #define USE_I2C
+
+// #define MOUSE_EXTENDED_REPORT
 
 //#define LED_NUM_LOCK_PIN B0
 //#define LED_CAPS_LOCK_PIN B1
