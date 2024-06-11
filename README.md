@@ -8,6 +8,9 @@ The JONKEY is a columnar split keyboard created using [ergogen](https://github.c
 - Ergogen Config: [jonkey.yml](jonkey.yml)
 - PCB Design: [pcbs/v1/](pcbs/v1/)
 - 3D Printable case: [case/](case/)
+  - The newest version has a 5 degree slope and tighter tolerances
+    - [Left](case/Case%20-%20Left%20-%205deg.stl)
+    - [Right](case/Case%20-%20Right%20-%205deg.stl)
 - QMK Config: [qmk_config/](qmk_config/)
 
 
