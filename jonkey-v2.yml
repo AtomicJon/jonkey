@@ -1,0 +1,219 @@
+points:
+  zones:
+    # the main matrix - all but the thumb keys
+    matrix:
+      anchor:
+        rotate: 0
+      columns:
+        outer2:
+          key:
+            column_net: P16
+          rows:
+            modifiers:
+              skip: true
+        outer1:
+          key:
+            stagger: 0
+            column_net: P14
+        pinky:
+          key:
+            stagger: 0
+            column_net: P15
+        ring:
+          key:
+            stagger: 5
+            column_net: P18
+        middle:
+          key:
+            stagger: 3
+            column_net: P19
+        index:
+          key:
+            stagger: -3
+            column_net: P20
+        inner1:
+          key:
+            stagger: -3
+            column_net: P21
+          rows:
+            modifiers:
+              skip: true
+      rows:
+        modifiers:
+          row_net: P7
+          padding: u + 2
+          bind: [1, 1, 1, 1]
+        bottom:
+          row_net: P10
+          bind: [1, 1, 1, 1]
+        home:
+          row_net: P6
+          bind: [1, 1, 1, 1]
+        top:
+          row_net: P5
+          bind: [1, 1, 1, 1]
+        numbers:
+          row_net: P4
+          bind: [4, 1, 1, 1]
+    # the (2) thumb keys
+    thumbs:
+      anchor:
+        ref: matrix_inner1_modifiers
+        shift: [4, -2]
+      columns:
+        inner1:
+          key:
+            column_net: P21
+            splay: -8
+        thumb1:
+          key:
+            column_net: P8
+            shift: [0, -2]
+            spread: cx + 4
+            splay: -8
+        thumb2:
+          key:
+            column_net: P9
+            shift: [0, -4]
+            spread: cx + 4
+            splay: -8
+      rows:
+        thumbrow:
+          row_net: P7
+          bind: [1, 1, 1, 1]
+outlines:
+  keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [u , u]
+  board:
+    - what: polygon
+      points:
+        # top left
+        - ref: matrix_outer2_numbers
+          shift: [-0.75u, u]
+        # top right + padding
+        - ref: matrix_inner1_numbers
+          shift: [1.75u, u - 2]
+        # above thumbs
+        - ref: matrix_inner1_bottom
+          shift: [1.75u, -0.5u]
+        # around thumbs
+        - ref: thumbs_thumb2_thumbrow
+          shift: [0.75u, 0.75u]
+        - ref: thumbs_thumb2_thumbrow
+          shift: [0.75u, -0.75u]
+        - ref: thumbs_inner1_thumbrow
+          shift: [-0.5u, -0.75u]
+        # bottom left
+        - ref: matrix_outer1_modifiers
+          shift: [-0.5u, -0.75u]
+        - ref: matrix_outer2_bottom
+          shift: [-0.75u, -0.5u]
+  cutout:
+    - what: outline
+      name: board
+      fillet: 4
+    # used for troubleshooting cutout
+    #- what: outline
+    #  name: keys
+    #  operation: subtract
+  keycap_outlines:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [cx, cy]
+pcbs:
+  main:
+    outlines:
+      main:
+        outline: cutout
+    footprints:
+      diode:
+        what: diode
+        where: true
+        adjust:
+          shift: [0, 5]
+          # rotate: 90
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+      via_row:
+        what: via
+        where: true
+        params:
+          net: "{{colrow}}"
+        adjust:
+          shift: [0, -3.5]
+      via_col:
+        what: via
+        where: true
+        params:
+          net: "{{column_net}}"
+        adjust:
+          shift: [0, -8.5]
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+          from: "{{colrow}}"
+          to: "{{column_net}}"
+        adjust:
+          rotate: 180
+      promicro:
+        what: promicro
+        adjust:
+          ref: matrix_inner1_numbers
+          shift: [u + 2, -0.5u]
+          rotate: -90
+        params:
+          orientation: down
+      reset_switch:
+        what: ceoloide/reset_switch_tht_top
+        adjust:
+          ref: matrix_inner1_top
+          shift: [u + 2, -0.5u]
+        params:
+          from: RST
+          to: GND
+      trrs:
+        what: trrs
+        adjust:
+          ref: matrix_inner1_top
+          shift: [u + 12, -u]
+          rotate: -90
+        params:
+          reverse: true
+          symmetric: false
+          A: VCC
+          B: P2
+          C: P3
+          D: GND
+      rotary:
+        what: rotary
+        adjust:
+          ref: matrix_inner1_bottom
+          shift: [u + 2, 0]
+          rotate: 90
+        params:
+          from: P8
+          to: P10
+          A: P0
+          B: GND
+          C: P1
+      display:
+        what: oled
+        adjust:
+          ref: matrix_inner1_bottom
+          shift: [1u + 10, 0.25u]
+        params:
+          SDA: P2
+          SCL: P3
+cases:
+  baseplate:
+    - what: outline
+      name: cutout
