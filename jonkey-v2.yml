@@ -213,6 +213,27 @@ pcbs:
         params:
           SDA: P2
           SCL: P3
+
+      # pull up resistors for i2c
+      sdaResistor:
+        what: diode
+        params:
+          designator: R1
+          from: P2
+          to: VCC
+        adjust:
+          ref: matrix_inner1_numbers
+          shift: [1u + 2, 0.5u + 3]
+      sclResistor:
+        what: diode
+        params:
+          designator: R2
+          from: P3
+          to: VCC
+        adjust:
+          ref: matrix_inner1_numbers
+          shift: [1u + 2, 0.5u]
+
       # mounting
       mountTopLeft:
         what: ceoloide/mounting_hole_npth
