@@ -21,7 +21,7 @@ points:
             column_net: P15
         ring:
           key:
-            stagger: 5
+            stagger: 6
             column_net: P18
         middle:
           key:
@@ -59,7 +59,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_inner1_modifiers
-        shift: [4, -2]
+        shift: [4, -4]
       columns:
         inner1:
           key:
@@ -213,6 +213,27 @@ pcbs:
         params:
           SDA: P2
           SCL: P3
+      # mounting
+      mountTopLeft:
+        what: ceoloide/mounting_hole_npth
+        adjust:
+          ref: matrix_outer2_numbers
+          shift: [0.5u, -0.5u]
+      mountTopRight:
+        what: ceoloide/mounting_hole_npth
+        adjust:
+          ref: matrix_inner1_numbers
+          shift: [-0.5u, -0.5u]
+      mountLowerLeft:
+        what: ceoloide/mounting_hole_npth
+        adjust:
+          ref: matrix_outer1_modifiers
+          shift: [0, 0.5u]
+      mountLowerRight:
+        what: ceoloide/mounting_hole_npth
+        adjust:
+          ref: matrix_index_modifiers
+          shift: [0, 0.5u]
 cases:
   baseplate:
     - what: outline
