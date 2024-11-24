@@ -217,7 +217,7 @@ pcbs:
         params:
           from: P8
           to: P10
-          A: P0
+          A: P9
           B: GND
           C: P1
       display:
@@ -228,26 +228,40 @@ pcbs:
         params:
           SDA: P2
           SCL: P3
+      # Easy access pads
+      serialPins:
+        what: oled
+        adjust:
+          rotate: 90
+          ref: matrix_inner1_numbers
+          shift: [0, 0.5u + 2]
+        params:
+          designator: SERIAL
+          SDA: VCC
+          SCL: P0
+          VCC: P0
 
       # pull up resistors for i2c
       sdaResistor:
         what: diode
+        adjust:
+          ref: matrix_inner1_home
+          shift: [0.5u + 3, 1]
+          rotate: 90
         params:
           designator: R1
           from: P2
           to: VCC
-        adjust:
-          ref: matrix_inner1_numbers
-          shift: [1u + 2, 0.5u + 3]
       sclResistor:
         what: diode
+        adjust:
+          ref: matrix_inner1_home
+          shift: [0.5u + 6, 1]
+          rotate: 90
         params:
           designator: R2
           from: P3
           to: VCC
-        adjust:
-          ref: matrix_inner1_numbers
-          shift: [1u + 2, 0.5u]
 
       # mounting
       mountTopLeft:
