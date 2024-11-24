@@ -1,0 +1,1390 @@
+matrix_outer2_bottom:
+  x: 0
+  'y': 21
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer2_bottom
+    name: matrix_outer2_bottom
+    column_net: P16
+    row_net: P10
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: &ref_1
+      columns:
+        outer2: &ref_0
+          key:
+            column_net: P16
+          rows:
+            modifiers:
+              skip: true
+          name: outer2
+        outer1: &ref_2
+          key:
+            stagger: 0
+            column_net: P14
+          rows:
+            modifiers:
+              column_net: P16
+          name: outer1
+        pinky: &ref_3
+          key:
+            stagger: 0
+            column_net: P15
+          rows:
+            modifiers:
+              column_net: P14
+          name: pinky
+        ring: &ref_4
+          key:
+            stagger: 6
+            column_net: P18
+          rows:
+            modifiers:
+              column_net: P15
+          name: ring
+        middle: &ref_5
+          key:
+            stagger: 3
+            column_net: P19
+          rows:
+            modifiers:
+              column_net: P18
+          name: middle
+        index: &ref_6
+          key:
+            stagger: -3
+            column_net: P20
+          rows:
+            modifiers:
+              column_net: P19
+          name: index
+        inner1: &ref_7
+          key:
+            stagger: -3
+            column_net: P21
+          rows:
+            modifiers:
+              skip: true
+          name: inner1
+      rows:
+        modifiers:
+          row_net: P7
+          padding: u + 2
+          bind:
+            - 1
+            - 1
+            - 1
+            - 1
+        bottom:
+          row_net: P10
+          bind:
+            - 1
+            - 1
+            - 1
+            - 1
+        home:
+          row_net: P6
+          bind:
+            - 1
+            - 1
+            - 1
+            - 1
+        top:
+          row_net: P5
+          bind:
+            - 1
+            - 1
+            - 1
+            - 1
+        numbers:
+          row_net: P4
+          bind:
+            - 4
+            - 1
+            - 1
+            - 1
+      name: matrix
+    col: *ref_0
+    row: bottom
+matrix_outer2_home:
+  x: 0
+  'y': 40
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer2_home
+    name: matrix_outer2_home
+    column_net: P16
+    row_net: P6
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_0
+    row: home
+matrix_outer2_top:
+  x: 0
+  'y': 59
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer2_top
+    name: matrix_outer2_top
+    column_net: P16
+    row_net: P5
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_0
+    row: top
+matrix_outer2_numbers:
+  x: 0
+  'y': 78
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer2_numbers
+    name: matrix_outer2_numbers
+    column_net: P16
+    row_net: P4
+    bind:
+      - 4
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_0
+    row: numbers
+matrix_outer1_modifiers:
+  x: 19
+  'y': 0
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 21
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer1_modifiers
+    name: matrix_outer1_modifiers
+    column_net: P16
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_2
+    row: modifiers
+matrix_outer1_bottom:
+  x: 19
+  'y': 21
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer1_bottom
+    name: matrix_outer1_bottom
+    column_net: P14
+    row_net: P10
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_2
+    row: bottom
+matrix_outer1_home:
+  x: 19
+  'y': 40
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer1_home
+    name: matrix_outer1_home
+    column_net: P14
+    row_net: P6
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_2
+    row: home
+matrix_outer1_top:
+  x: 19
+  'y': 59
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer1_top
+    name: matrix_outer1_top
+    column_net: P14
+    row_net: P5
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_2
+    row: top
+matrix_outer1_numbers:
+  x: 19
+  'y': 78
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: outer1_numbers
+    name: matrix_outer1_numbers
+    column_net: P14
+    row_net: P4
+    bind:
+      - 4
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_2
+    row: numbers
+matrix_pinky_modifiers:
+  x: 38
+  'y': 0
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 21
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: pinky_modifiers
+    name: matrix_pinky_modifiers
+    column_net: P14
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_3
+    row: modifiers
+matrix_pinky_bottom:
+  x: 38
+  'y': 21
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: pinky_bottom
+    name: matrix_pinky_bottom
+    column_net: P15
+    row_net: P10
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_3
+    row: bottom
+matrix_pinky_home:
+  x: 38
+  'y': 40
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: pinky_home
+    name: matrix_pinky_home
+    column_net: P15
+    row_net: P6
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_3
+    row: home
+matrix_pinky_top:
+  x: 38
+  'y': 59
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: pinky_top
+    name: matrix_pinky_top
+    column_net: P15
+    row_net: P5
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_3
+    row: top
+matrix_pinky_numbers:
+  x: 38
+  'y': 78
+  r: 0
+  meta:
+    stagger: 0
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: pinky_numbers
+    name: matrix_pinky_numbers
+    column_net: P15
+    row_net: P4
+    bind:
+      - 4
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_3
+    row: numbers
+matrix_ring_modifiers:
+  x: 57
+  'y': 6
+  r: 0
+  meta:
+    stagger: 6
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 21
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: ring_modifiers
+    name: matrix_ring_modifiers
+    column_net: P15
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_4
+    row: modifiers
+matrix_ring_bottom:
+  x: 57
+  'y': 27
+  r: 0
+  meta:
+    stagger: 6
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: ring_bottom
+    name: matrix_ring_bottom
+    column_net: P18
+    row_net: P10
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_4
+    row: bottom
+matrix_ring_home:
+  x: 57
+  'y': 46
+  r: 0
+  meta:
+    stagger: 6
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: ring_home
+    name: matrix_ring_home
+    column_net: P18
+    row_net: P6
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_4
+    row: home
+matrix_ring_top:
+  x: 57
+  'y': 65
+  r: 0
+  meta:
+    stagger: 6
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: ring_top
+    name: matrix_ring_top
+    column_net: P18
+    row_net: P5
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_4
+    row: top
+matrix_ring_numbers:
+  x: 57
+  'y': 84
+  r: 0
+  meta:
+    stagger: 6
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: ring_numbers
+    name: matrix_ring_numbers
+    column_net: P18
+    row_net: P4
+    bind:
+      - 4
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_4
+    row: numbers
+matrix_middle_modifiers:
+  x: 76
+  'y': 9
+  r: 0
+  meta:
+    stagger: 3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 21
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: middle_modifiers
+    name: matrix_middle_modifiers
+    column_net: P18
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_5
+    row: modifiers
+matrix_middle_bottom:
+  x: 76
+  'y': 30
+  r: 0
+  meta:
+    stagger: 3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: middle_bottom
+    name: matrix_middle_bottom
+    column_net: P19
+    row_net: P10
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_5
+    row: bottom
+matrix_middle_home:
+  x: 76
+  'y': 49
+  r: 0
+  meta:
+    stagger: 3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: middle_home
+    name: matrix_middle_home
+    column_net: P19
+    row_net: P6
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_5
+    row: home
+matrix_middle_top:
+  x: 76
+  'y': 68
+  r: 0
+  meta:
+    stagger: 3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: middle_top
+    name: matrix_middle_top
+    column_net: P19
+    row_net: P5
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_5
+    row: top
+matrix_middle_numbers:
+  x: 76
+  'y': 87
+  r: 0
+  meta:
+    stagger: 3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: middle_numbers
+    name: matrix_middle_numbers
+    column_net: P19
+    row_net: P4
+    bind:
+      - 4
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_5
+    row: numbers
+matrix_index_modifiers:
+  x: 95
+  'y': 6
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 21
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: index_modifiers
+    name: matrix_index_modifiers
+    column_net: P19
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_6
+    row: modifiers
+matrix_index_bottom:
+  x: 95
+  'y': 27
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: index_bottom
+    name: matrix_index_bottom
+    column_net: P20
+    row_net: P10
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_6
+    row: bottom
+matrix_index_home:
+  x: 95
+  'y': 46
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: index_home
+    name: matrix_index_home
+    column_net: P20
+    row_net: P6
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_6
+    row: home
+matrix_index_top:
+  x: 95
+  'y': 65
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: index_top
+    name: matrix_index_top
+    column_net: P20
+    row_net: P5
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_6
+    row: top
+matrix_index_numbers:
+  x: 95
+  'y': 84
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: index_numbers
+    name: matrix_index_numbers
+    column_net: P20
+    row_net: P4
+    bind:
+      - 4
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_6
+    row: numbers
+matrix_inner1_bottom:
+  x: 114
+  'y': 24
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: inner1_bottom
+    name: matrix_inner1_bottom
+    column_net: P21
+    row_net: P10
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_7
+    row: bottom
+matrix_inner1_home:
+  x: 114
+  'y': 43
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: inner1_home
+    name: matrix_inner1_home
+    column_net: P21
+    row_net: P6
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_7
+    row: home
+matrix_inner1_top:
+  x: 114
+  'y': 62
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: inner1_top
+    name: matrix_inner1_top
+    column_net: P21
+    row_net: P5
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_7
+    row: top
+matrix_inner1_numbers:
+  x: 114
+  'y': 81
+  r: 0
+  meta:
+    stagger: -3
+    spread: 19
+    splay: 0
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: inner1_numbers
+    name: matrix_inner1_numbers
+    column_net: P21
+    row_net: P4
+    bind:
+      - 4
+      - 1
+      - 1
+      - 1
+    zone: *ref_1
+    col: *ref_7
+    row: numbers
+thumbs_inner1_thumbrow:
+  x: 118
+  'y': -1
+  r: -8
+  meta:
+    stagger: 0
+    spread: 19
+    splay: -8
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - 0
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: inner1_thumbrow
+    name: thumbs_inner1_thumbrow
+    column_net: P20
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: &ref_9
+      columns:
+        inner1: &ref_8
+          key:
+            column_net: P20
+            splay: -8
+          rows: {}
+          name: inner1
+        thumb1: &ref_10
+          key:
+            column_net: P21
+            shift:
+              - 0
+              - -2
+            spread: cx + 4
+            splay: -8
+          rows: {}
+          name: thumb1
+        thumb2: &ref_11
+          key:
+            column_net: P8
+            shift:
+              - 0
+              - -4
+            spread: cx + 4
+            splay: -8
+          rows: {}
+          name: thumb2
+      rows:
+        thumbrow:
+          row_net: P7
+          bind:
+            - 1
+            - 1
+            - 1
+            - 1
+      name: thumbs
+    col: *ref_8
+    row: thumbrow
+thumbs_thumb1_thumbrow:
+  x: 139.2346228
+  'y': -5.9843316
+  r: -16
+  meta:
+    stagger: 0
+    spread: 22
+    splay: -8
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - -2
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: thumb1_thumbrow
+    name: thumbs_thumb1_thumbrow
+    column_net: P21
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_9
+    col: *ref_10
+    row: thumbrow
+thumbs_thumb2_thumbrow:
+  x: 159.3067082
+  'y': -13.7800118
+  r: -24
+  meta:
+    stagger: 0
+    spread: 22
+    splay: -8
+    origin:
+      - 0
+      - 0
+    orient: 0
+    shift:
+      - 0
+      - -4
+    rotate: 0
+    adjust: {}
+    width: 18
+    height: 18
+    padding: 19
+    autobind: 10
+    skip: false
+    asym: both
+    colrow: thumb2_thumbrow
+    name: thumbs_thumb2_thumbrow
+    column_net: P8
+    row_net: P7
+    bind:
+      - 1
+      - 1
+      - 1
+      - 1
+    zone: *ref_9
+    col: *ref_11
+    row: thumbrow

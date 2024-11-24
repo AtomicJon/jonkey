@@ -452,10 +452,6 @@
       },
       {
         "netclass": "Default",
-        "pattern": "P9"
-      },
-      {
-        "netclass": "Default",
         "pattern": "RAW"
       },
       {
@@ -485,6 +481,10 @@
       {
         "netclass": "Default",
         "pattern": "P3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "P9"
       }
     ]
   },
