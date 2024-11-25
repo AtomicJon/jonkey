@@ -250,7 +250,7 @@ pcbs:
           rotate: 90
         params:
           designator: R1
-          from: P2
+          from: P3
           to: VCC
       sclResistor:
         what: diode
@@ -260,7 +260,7 @@ pcbs:
           rotate: 90
         params:
           designator: R2
-          from: P3
+          from: P2
           to: VCC
 
       # mounting
