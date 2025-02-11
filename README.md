@@ -2,9 +2,24 @@
 
 The JONKEY is a columnar split keyboard created using [ergogen](https://github.com/ergogen/ergogen).
 
+## v2
+![jonkey v2](assets/jonkey-v2.jpg)
+#### What's New
+- Swap thumb layout
+- Added encoder mounts
+- Added screen
+- TODO: Touchpad mount
+
+### Project Contents
+- Ergogen Config: [jonkey-v2.yml](jonkey-v2.yml)
+- PCB Design: [pcbs/](pcbs/)
+- 3D Printable case: __TODO__
+- QMK Config: [qmk_config/](qmk_config/)
+
+## v1
 ![jonkey v1](assets/jonkey-v1.jpg)
 
-## Project Contents
+### Project Contents
 - Ergogen Config: [jonkey.yml](v1/jonkey.yml)
 - PCB Design: [v1/pcbs/v1.1/](v1/pcbs/v1.1/)
 - 3D Printable case: [case/](v1/case/)
